@@ -1,0 +1,12 @@
+# Site settings
+title: 小田鸡工作室
+email: honest_huang@126.com
+description: > # 
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.ltlfrog.com" 
+twitter_username: jekyllrb
+github_username:  jekyll
+safe: false
+
+# Build settings
+markdown: kramdown
