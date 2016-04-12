@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html class="ss_class_WorkHolder" lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Home</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta http-equiv="content-language" content="en-US">
+    <meta name="theme-color" content="#ffffff">
+
+    <script defer>;
+    window.Modernizr = function (a, b, c) {
+        function z(a) {
+            j.cssText = a
+        }
+
+        function A(a, b) {
+            return z(m.join(a + ";") + (b || ""))
+        }
+
+        function B(a, b) {
+            return typeof a === b
+        }
+
+        function C(a, b) {
+            return !!~("" + a).indexOf(b)
+        }
+
+        function D(a, b) {
+            for (var d in a) {
+                var e = a[d];
+                if (!C(e, "-") && j[e] !== c)return b == "pfx" ? e : !0
+            }
+            return !1
+        }
+
+        function E(a, b, d) {
+            for (var e in a) {
+                var f = b[a[e]];
+                if (f !== c)return d === !1 ? a[e] : B(f, "function") ? f.bind(d || b) : f
+            }
+            return !1
+        }
+
+        function F(a, b, c) {
+            var d = a.charAt(0).toUpperCase() + a.slice(1), e = (a + " " + o.join(d + " ") + d).split(" ");
+            return B(b, "string") || B(b, "undefined") ? D(e, b) : (e = (a + " " + p.join(d + " ") + d).split(" "), E(e, b, c))
+        }
+
+        var d = "2.8.3", e = {}, f = !0, g = b.documentElement, h = "modernizr", i = b.createElement(h), j = i.style, k, l = {}.toString, m = " -webkit- -moz- -o- -ms- ".split(" "), n = "Webkit Moz O ms", o = n.split(" "), p = n.toLowerCase().split(" "), q = {}, r = {}, s = {}, t = [], u = t.slice, v, w = function (a, c, d, e) {
+            var f, i, j, k, l = b.createElement("div"), m = b.body, n = m || b.createElement("body");
+            if (parseInt(d, 10))while (d--)j = b.createElement("div"), j.id = e ? e[d] : h + (d + 1), l.appendChild(j);
+            return f = ["&#173;", '<style id="s', h, '">', a, "</style>"].join(""), l.id = h, (m ? l : n).innerHTML += f, n.appendChild(l), m || (n.style.background = "", n.style.overflow = "hidden", k = g.style.overflow, g.style.overflow = "hidden", g.appendChild(n)), i = c(l, a), m ? l.parentNode.removeChild(l) : (n.parentNode.removeChild(n), g.style.overflow = k), !!i
+        }, x = {}.hasOwnProperty, y;
+        !B(x, "undefined") && !B(x.call, "undefined") ? y = function (a, b) {
+            return x.call(a, b)
+        } : y = function (a, b) {
+            return b in a && B(a.constructor.prototype[b], "undefined")
+        }, Function.prototype.bind || (Function.prototype.bind = function (b) {
+            var c = this;
+            if (typeof c != "function")throw new TypeError;
+            var d = u.call(arguments, 1), e = function () {
+                if (this instanceof e) {
+                    var a = function () {
+                    };
+                    a.prototype = c.prototype;
+                    var f = new a, g = c.apply(f, d.concat(u.call(arguments)));
+                    return Object(g) === g ? g : f
+                }
+                return c.apply(b, d.concat(u.call(arguments)))
+            };
+            return e
+        }), q.touch = function () {
+            var c;
+            return "ontouchstart" in a || a.DocumentTouch && b instanceof DocumentTouch ? c = !0 : w(["@media (", m.join("touch-enabled),("), h, ")", "{#modernizr{top:9px;position:absolute}}"].join(""), function (a) {
+                c = a.offsetTop === 9
+            }), c
+        }, q.history = function () {
+            return !!a.history && !!history.pushState
+        }, q.opacity = function () {
+            return A("opacity:.55"), /^0.55$/.test(j.opacity)
+        }, q.cssanimations = function () {
+            return F("animationName")
+        }, q.csstransitions = function () {
+            return F("transition")
+        }, q.fontface = function () {
+            var a;
+            return w('@font-face {font-family:"font";src:url("https://")}', function (c, d) {
+                var e = b.getElementById("smodernizr"), f = e.sheet || e.styleSheet, g = f ? f.cssRules && f.cssRules[0] ? f.cssRules[0].cssText : f.cssText || "" : "";
+                a = /src/i.test(g) && g.indexOf(d.split(" ")[0]) === 0
+            }), a
+        };
+        for (var G in q)y(q, G) && (v = G.toLowerCase(), e[v] = q[G](), t.push((e[v] ? "" : "no-") + v));
+        return e.addTest = function (a, b) {
+            if (typeof a == "object")for (var d in a)y(a, d) && e.addTest(d, a[d]); else {
+                a = a.toLowerCase();
+                if (e[a] !== c)return e;
+                b = typeof b == "function" ? b() : b, typeof f != "undefined" && f && (g.className += " " + (b ? "" : "no-") + a), e[a] = b
+            }
+            return e
+        }, z(""), i = k = null, function (a, b) {
+            function l(a, b) {
+                var c = a.createElement("p"), d = a.getElementsByTagName("head")[0] || a.documentElement;
+                return c.innerHTML = "x<style>" + b + "</style>", d.insertBefore(c.lastChild, d.firstChild)
+            }
+
+            function m() {
+                var a = s.elements;
+                return typeof a == "string" ? a.split(" ") : a
+            }
+
+            function n(a) {
+                var b = j[a[h]];
+                return b || (b = {}, i++, a[h] = i, j[i] = b), b
+            }
+
+            function o(a, c, d) {
+                c || (c = b);
+                if (k)return c.createElement(a);
+                d || (d = n(c));
+                var g;
+                return d.cache[a] ? g = d.cache[a].cloneNode() : f.test(a) ? g = (d.cache[a] = d.createElem(a)).cloneNode() : g = d.createElem(a), g.canHaveChildren && !e.test(a) && !g.tagUrn ? d.frag.appendChild(g) : g
+            }
+
+            function p(a, c) {
+                a || (a = b);
+                if (k)return a.createDocumentFragment();
+                c = c || n(a);
+                var d = c.frag.cloneNode(), e = 0, f = m(), g = f.length;
+                for (; e < g; e++)d.createElement(f[e]);
+                return d
+            }
+
+            function q(a, b) {
+                b.cache || (b.cache = {}, b.createElem = a.createElement, b.createFrag = a.createDocumentFragment, b.frag = b.createFrag()), a.createElement = function (c) {
+                    return s.shivMethods ? o(c, a, b) : b.createElem(c)
+                }, a.createDocumentFragment = Function("h,f", "return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&(" + m().join().replace(/[w-]+/g, function (a) {
+                            return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")'
+                        }) + ");return n}")(s, b.frag)
+            }
+
+            function r(a) {
+                a || (a = b);
+                var c = n(a);
+                return s.shivCSS && !g && !c.hasCSS && (c.hasCSS = !!l(a, "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")), k || q(a, c), a
+            }
+
+            var c = "3.7.0", d = a.html5 || {}, e = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i, f = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i, g, h = "_html5shiv", i = 0, j = {}, k;
+            (function () {
+                try {
+                    var a = b.createElement("a");
+                    a.innerHTML = "<xyz></xyz>", g = "hidden" in a, k = a.childNodes.length == 1 || function () {
+                                b.createElement("a");
+                                var a = b.createDocumentFragment();
+                                return typeof a.cloneNode == "undefined" || typeof a.createDocumentFragment == "undefined" || typeof a.createElement == "undefined"
+                            }()
+                } catch (c) {
+                    g = !0, k = !0
+                }
+            })();
+            var s = {
+                elements: d.elements || "abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video",
+                version: c,
+                shivCSS: d.shivCSS !== !1,
+                supportsUnknownElements: k,
+                shivMethods: d.shivMethods !== !1,
+                type: "default",
+                shivDocument: r,
+                createElement: o,
+                createDocumentFragment: p
+            };
+            a.html5 = s, r(b)
+        }(this, b), e._version = d, e._prefixes = m, e._domPrefixes = p, e._cssomPrefixes = o, e.testProp = function (a) {
+            return D([a])
+        }, e.testAllProps = F, e.testStyles = w, g.className = g.className.replace(/(^|s)no-js(s|$)/, "$1$2") + (f ? " js " + t.join(" ") : ""), e
+    }(this, this.document);</script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <style type="text/css">
+        .hero {
+            padding-bottom: 66.6%;
+        }
+    </style>
+</head>
+<body>
+<header class="header" data-role="header">
+    <h1 class="title uppercase">WarmMove</h1>
+    <a href="/" class="logo" title></a>
+
+    <!--<p class="intro">WormMove is a creative studio that specialises<br>in portraying unbuilt architecture. </p>-->
+    <p class="intro"> </p>
+</header>
+
+
+<div class="navigation">
+    <ul class="main-menu">
+
+        <li class="inline">
+
+
+            <a href="/work/" title="Go to the Work page" class="menuText section lowercase">
+                Work
+            </a>
+
+        </li>
+
+        <li class="inline">
+
+
+            <a href="" title="Go to the Team page" class="menuText link lowercase">
+                Team
+            </a>
+
+        </li>
+
+        <li class="inline">
+
+
+            <a href=""
+               title="Go to the Info page"
+               class="menuText link lowercase">
+                Info
+            </a>
+
+        </li>
+
+    </ul>
+
+    <hr class="nav">
+
+
+</div>
+
+<div class="handheld-menu-button"></div>
+
+<div class="handheld-menu fade">
+    <div class="table">
+        <ul class="list">
+
+            <li>
+                <a href="/work/" title="Go to the Work page" class="menuText section lowercase">
+                    Work
+                </a>
+            </li>
+
+
+            <li>
+                <a href="/team/" title="Go to the Team page" class="menuText link lowercase">
+                    Team
+                </a>
+            </li>
+
+
+            <li>
+                <a href="/info/" title="Go to the Info page" class="menuText link lowercase">
+                    Info
+                </a>
+            </li>
+
+
+            <li>
+                <a href="/info/philosophy/" title="Go to the Philosophy page"
+                   class="menuText link lowercase">
+                    Philosophy
+                </a>
+            </li>
+
+            <li>
+                <a href="/info/tour-the-studio/" title="Go to the Tour the Studio page"
+                   class="menuText link lowercase">
+                    Tour the Studio
+                </a>
+            </li>
+
+            <li>
+                <a href="/info/jobs/" title="Go to the Jobs page"
+                   class="menuText link lowercase">
+                    Jobs
+                </a>
+            </li>
+
+            <li>
+                <a href="/info/upload-files/" title="Go to the Files page"
+                   class="menuText link lowercase">
+                    Files
+                </a>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+<div class="main frame" role="main">
+
+    <div class="frame">
+
+        <div class="hero">
+            <span class="hero-image fade" data-alt>
+                <span data-src="./img/origin/WA-001.jpg"></span>
+            </span>
+        </div>
+    </div>
+
+    <article class="grid">
+    </article>
+
+</div>
+<div id="Pics">
+
+</div>
+
+<script src="./js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="./js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    $(function(){
+//        var i = 1;
+//        var imgs = [];
+//        while(i<=107){
+//            var img = {};
+//            img.name = "WA-"+ i.Left3()+".jpg";
+//            img.sort = i * 5;
+//            img.cls = "thumb";
+//            img.isVideo = false;
+//            img.videoID = "";
+//            imgs.push(img);
+//            i++;
+//            console.log(img);
+//        }
+//        console.log(imgs);
+//        $("body").html(imgs);
+
+
+
+
+
+    });
+</script>
+<script type="text/javascript" src="./js/config.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+
+<script id="lightning-image" type="text/x-handlebars-template">
+    <div class="lightning fade">
+        <div class="frame fade">
+            <span class="image">
+                <img src="{{url}}" alt>
+            </span>
+        </div>
+    </div>
+</script>
+
+<script id="lightning-video" type="text/x-handlebars-template">
+    <div class="lightning fade">
+        <div class="frame fade">
+
+            <div class="video">
+                <iframe src="//player.vimeo.com/video/{{videoID}}?portrait=0&color=333"
+                        width="160"
+                        height="90"
+                        frameborder="0"
+                        webkitallowfullscreen
+                        mozallowfullscreen
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</script>
+
+<span id="animationSpeed" data-animationSpeed="1.00"></span>
+<span id="animationEase" data-animationEase="Quad.easeInOut"></span>
+
+<div class="page--loader"></div>
+
+</body>
+</html>
+
