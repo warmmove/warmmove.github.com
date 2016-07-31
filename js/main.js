@@ -4149,6 +4149,7 @@ window.matchMedia = window.matchMedia || (function(e, f) {
     var $;
     $ = jQuery;
     $.fn.jsclock = function(sTime, oConfig) {
+
         var sCurrentTime, that;
         that = this;
         sCurrentTime = "";
@@ -4961,7 +4962,7 @@ var StaffLazy = function() {
 }();
 $(document).ready(function() {
 
-    Config.init();
+    //Config.init();
 
 
 
@@ -4993,10 +4994,16 @@ $(document).ready(function() {
     }
     var clock = $(".current-time span");
     if (clock.is("*")) {
-        clock.load(ctx+"/time.do", null, function(response, status) {
-        	var json = JSON.parse(response);
-            $(this).jsclock(json);
-        });
+        //var d = new Date();
+        //var t = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        //console.log(t);
+        clock.jsclock();
+        //$(this).startClock();
+        //clock.load("http://api.k780.com:88/?app=life.time&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json", null, function(response, status) {
+        //	var json = JSON.parse(response);
+        //    console.log(json)
+        //    //$(this).jsclock(json);
+        //});
     }
 });
 
