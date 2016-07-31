@@ -4962,8 +4962,9 @@ var StaffLazy = function() {
 }();
 $(document).ready(function() {
 
-    //Config.init();
-
+    if(!!Config){
+    Config.init();
+    }
 
 
 
